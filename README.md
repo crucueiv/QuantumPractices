@@ -2,7 +2,7 @@
 
 Collection of **Quantum Computing** practices completed during the third year
 of the Software Engineering degree at the University of Málaga. The repository
-contains five Jupyter notebooks that progressively introduce the mathematical
+contains six Jupyter notebooks that progressively introduce the mathematical
 and practical foundations required to work with quantum states, operators,
 circuits, and measurements of one- and multi-qubit systems.
 
@@ -20,6 +20,8 @@ QuantumPractices/
 │   └── CC-nb4-circuitos-1qubit.ipynb
 ├── Practice5/
 │   └── CC-nb5-medidas-1qubit.ipynb
+├── Practice6/
+│   └── CC-nb6-circuitos-multiqubit.ipynb
 └── README.md
 ```
 
@@ -133,6 +135,29 @@ This practice covers the measurement postulate, the randomness of measurement
 results, and the relationship between repeated measurements, probabilities,
 and observables.
 
+### Practice 6 — Multi-qubit circuits
+
+**File:** `Practice6/CC-nb6-circuitos-multiqubit.ipynb`
+
+Introduces the construction, simulation, and analysis of circuits involving
+multiple qubits:
+
+- available simulation methods in Qiskit Aer and their intended use cases;
+- CNOT gates with the control qubit in the most- or least-significant bit;
+- the relationship between qubit ordering, matrix representations, and SWAP
+  gates;
+- simulations with quantum and classical registers, measurements, and
+  histograms;
+- the entangling circuit \( \mathrm{CNOT}(H \otimes I) \) and Bell states;
+- controlled gates with several control qubits, including Fredkin (CSWAP),
+  Toffoli (CCNOT), and multi-controlled \(X\) (MCX) gates;
+- extraction and visualization of the unitary matrix of a multi-qubit circuit;
+- construction, simulation, and measurement of GHZ states and their variants.
+
+This practice combines the previous work on states, gates, and measurements to
+study multi-qubit operations, entanglement, controlled transformations, and
+the qubit-ordering conventions used by Qiskit.
+
 ## Dependencies
 
 The notebooks install or use the following libraries:
@@ -181,7 +206,7 @@ jupyter lab
 ```
 
 Then open any `.ipynb` file and run its cells in order. The recommended
-sequence is `Practice1` through `Practice5`, since each practice builds on
+sequence is `Practice1` through `Practice6`, since each practice builds on
 concepts introduced in the previous ones.
 
 ## Conceptual progression
@@ -194,6 +219,9 @@ The repository follows this progression:
    entanglement.
 4. **Circuits:** gates and one-qubit evolution.
 5. **Measurement:** probabilities, experimental results, and expectation values.
+6. **Multi-qubit circuits:** controlled gates, entanglement, multi-qubit
+   matrices, and GHZ states.
 
 Together, these practices provide a practical introduction to the mathematical
-description and simulation of basic quantum circuits with Qiskit.
+description and simulation of one- and multi-qubit quantum circuits with
+Qiskit.
